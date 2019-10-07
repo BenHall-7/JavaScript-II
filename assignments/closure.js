@@ -7,6 +7,7 @@ function getRandomGenerator(seed = 0) {
   let s = seed;
   return () => {
     s = (s * 61 + 1401) & 0xfff;
+    return s;
   }
 }
 

@@ -100,8 +100,11 @@ console.log(`runners left: ${runners.length}`);
 
 // Problem 2
 // IDs are too boring. Everyone's ID now will be multiplied by their donations
-runners.forEach(person => {
-  person.ID *= person.donation;
+runners.forEach((person, index) => {
+  person.id *= person.donation;
 })
 
 // Problem 3
+// The CHOSEN FEW are the elite runners, only those with prestige may join their ranks. The qualification criteria however is simple... Their new IDs must be greater than 1000!
+let chosen = runners.filter(person => person.id > 5000)
+console.log(chosen);
